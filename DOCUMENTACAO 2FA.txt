@@ -1,0 +1,10 @@
+TOTP Authenticator
+Uma senha de uso único baseada no tempo (TOTP) é um método de autenticação no qual códigos exclusivos são gerados a cada 30 a 60 segundos com base em um algoritmo
+A TOTP depende de um algoritmo secreto que gera códigos. O algoritmo, que é único para cada instância, usa o tempo atual como fator. Isso permite que o algoritmo produza um código novo e exclusivo a cada 30 a 60 segundos.
+Cada vez que um usuário iniciar a criação de uma nova TOTP para uma conta, os servidores da conta gerarão um algoritmo secreto exclusivo, geralmente exibido como um código QR. O servidor mantém o segredo e usa-o para gerar os códigos TOTP.
+O usuário digitalizará o código QR com uma ferramenta autenticadora, que pode ser um aplicativo de telefone dedicado ou um recurso de um gerenciador de senhas. Como a ferramenta autenticadora agora tem o algoritmo secreto, ela calcula exatamente os mesmos códigos de seis dígitos que o servidor.
+ OTP (One Time Password) é uma senha numérica curta que será enviada por SMS ou por ligação para o número de celular registrado.
+
+Depois de configurado, o algoritmo é executado simultaneamente no servidor e na ferramenta autenticadora do usuário, produzindo exatamente os mesmos códigos de seis dígitos ao mesmo tempo.
+
+Quando um usuário faz login, ele insere o código atual exibido em sua ferramenta autenticadora. O servidor comparará o código calculado com o código do usuário. Se os códigos corresponderem, o usuário será verificado e terá acesso.
